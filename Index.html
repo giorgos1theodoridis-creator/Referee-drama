@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ε.Π.Σ. ΔΡΑΜΑΣ - Ορισμοί Διαιτητών</title>
+<style>
+:root {
+--primary: #1b4d3e;
+--secondary: #2c7a51;
+--accent: #d97706;
+--bg: #f3f4f6;
+--card-bg: #ffffff;
+--text: #1f2937;
+--danger: #dc2626;
+--success: #16a34a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: var(--bg); color: var(--text); padding-bottom: 70px; }
+header { background: var(--primary); color: white; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+header h1 { font-size: 1.2rem; margin-bottom: 5px; }
+header p { font-size: 0.85rem; opacity: 0.8; }
+
+.top-mode-switch { display: flex; background: #0f2d24; padding: 8px; justify-content: center; gap: 10px; }
+.mode-btn { background: rgba(255,255,255,0.2); border: none; color: white; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; font-weight: bold; }
+.mode-btn.active { background: var(--accent); }
+
+.container { padding: 15px; max-width: 800px; margin: 0 auto; }
+.card { background: var(--card-bg); border-radius: 8px; padding: 15px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-left: 4px solid var(--secondary); }
+.card.conflict { border-left-color: var(--danger); background: #fef2f2; }
+
+.badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.7rem; font-weight: bold; }
+.badge-a { background: #fee2e2; color: #991b1b; }
+.badge-youth { background: #e0f2fe; color: #0369a1; }
+.badge-conflict { background: #fee2e2; color: var(--danger); }
+
+.btn { background: var(--secondary); color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 8px; font-size: 0.9rem; }
+.btn-danger { background: var(--danger); }
+.btn-accent { background: var(--accent); }
+.btn-group { display: flex; gap: 8px; margin-top: 10px; }
+
+input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; border: 1px solid #d1d5db; border-radius: 4px; }
+
+/* Mobile Navigation */
+.mobile-nav { position: fixed; bottom: 0; left: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 10px 0; box-shadow: 0 -2px 5px rgba(0,0,0,0.1); z-index: 100; }
+.nav-item { text-align: center; font-size: 0.75rem; color: #6b7280; cursor: pointer; flex: 1; }
+.nav-item.active { color: var(--primary); font-weight: bold; }
+.nav-item span { display: block; font-size: 1.2rem; }
+
+.section { display: none; }
+.section.active { display: block; }
+
+/* Modal */
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 1000; }
+.modal-content { background: white; padding: 20px; border-radius: 8px; width: 90%; max-width: 600px; max-height: 85vh; overflow-y: auto; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Ε.Π.Σ. ΔΡΑΜΑΣ</h1>
+<p>Σύστημα Διαχείρισης & Ορισμών Διαιτησίας (2026-2027)</p>
+</header>
+
+<div class="top-mode-switch">
+<button class="mode-btn active" onclick="switchView('referee')">📱 Εφαρμογή Διαιτητή</button>
+<button class="mode-btn" onclick="switchView('admin')">⚙️ Πίνακας Επιτροπής</button>
+</div>
+
+<div class="container">
+
+<!-- ================= REFESEE VIEW ================= -->
+<div id="view-referee" class="section active">
+<div class="card" style="border-left-color: var(--accent);">
+<h3>👋 Καλωσήρθες, Γιάννης Παπαδόπουλος</h3>
+<p style="font-size: 0.85rem; color: #4b5563;">Διαιτητής Α' Κατηγορίας | Ε.Π.Σ. Δράμαςspan_5span_5</p>
+</div>
+
+<!-- Tab 1: Ορισμοί -->
+<div id="ref-tab-matches" class="ref-sub-section">
+<h3>⚽ Οι Ορισμοί μου (Αγωνιστική)</h3>
+<div class="card">
+<span class="badge badge-a">Α' ΚΑΤΗΓΟΡΙΑ</span>span_6span_6
+<h4 style="margin-top: 5px;">Α.Ε. ΑΜΠΕΛΟΚΗΠΩΝ vs Α.Ε. ΚΑΛΑΜΠΑΚΙΟΥ</h4>span_7span_7
+<p>📅 31/10/2026 | 🕒 15:00 | 🏟️ ΑΜΠΕΛΟΚΗΠΩΝ (ΚΡΑΧΤΙΔΗ)</p>span_8span_8
+<p><strong>Θέση:</strong> Διαιτητής</p>span_9span_9
+<p><strong>Τριάδα:</strong> Παπαδόπουλος, ΖΗΣΗΣ, ΜΑΡΜΑΡΙΔΗΣ</p>span_10span_10
+<button class="btn" style="background: var(--success);" onclick="alert('Επιβεβαιώσατε τον ορισμό σας!')">✅ Επιβεβαίωση Ορισμού</button>
+</div>
+<div class="card">
+<span class="badge badge-youth">Κ-15 ΠΑΙΔΙΚΑ</span>span_11span_11
+<h4 style="margin-top: 5px;">Γ.Σ. ΔΟΞΑ ΔΡΑΜΑΣ 1 vs ΑΚΡΙΤΑΣ ΚΑΤΩ ΝΕΥΡΟΚΟΠΙΟΥ</h4>span_12span_12
+<p>📅 31/10/2026 | 🕒 10:30 | 🏟️ ΔΟΞΑΣ (ΠΛΑΣΤΙΚΟ)</p>span_13span_13
+<p><strong>Θέση:</strong> Διαιτητής (Ιορδανίδου Ελένη)</p>span_14span_14
+</div>
+</div>
+
+<!-- Tab 2: Κωλύματα -->
+<div id="ref-tab-conflicts" class="ref-sub-section" style="display:none;">
+<h3>⚠️ Δήλωση Κωλύματος</h3>
+<div class="card">
+<form onsubmit="submitConflict(event)">
+<label>Τύπος Κωλύματος:</label>
+<select id="conf-type">
+<option value="work">Εργασία / Ημερομηνία</option>
+<option value="team">Συγκεκριμένη Ομάδα</option>
+</select>
+<label>Λεπτομέρειες / Ομάδα:</label>
+<input type="text" id="conf-desc" placeholder="π.χ. Α.Ε. Αμπελοκήπων λόγω εντοπιότητας" required>
+<button type="submit" class="btn btn-danger"> Υποβολή Κωλύματος</button>
+</form>
+</div>
+<h4>Ενεργά Κωλύματα</h4>
+<div id="active-conflicts-list">
+<div class="card" style="padding: 10px; font-size: 0.85rem;">
+❌ <strong>Ομάδα:</strong> Δόξα Δράμας (Προηγούμενα θέματα)
+</div>
+</div>
+</div>
+
+<!-- Tab 3: Προπονήσεις -->
+<div id="ref-tab-training" class="ref-sub-section" style="display:none;">
+<h3>🏃‍♂️ Καταγραφή Προπόνησης</h3>
+<div class="card">
+<form onsubmit="submitTraining(event)">
+<label>Τύπος Άσκησης:</label>
+<select>
+<option>Τρέξιμο / GPS</option>
+<option>Γυμναστήριο / Ενδυνάμωση</option>
+<option>Sprint & Intervals</option>
+</select>
+<label>Διάρκεια (Λεπτά):</label>
+<input type="number" placeholder="60" required>
+<label>Χιλιόμετρα / Σημειώσεις:</label>
+<input type="text" placeholder="8.5 km, μέσοι παλμοί 145">
+<button type="submit" class="btn">Καταγραφή Προπόνησης</button>
+</form>
+</div>
+</div>
+
+<!-- Tab 4: Μαθήματα -->
+<div id="ref-tab-classes" class="ref-sub-section" style="display:none;">
+<h3>📚 Θεωρητικά Μαθήματα Διαιτησίας</h3>
+<div class="card">
+<p><strong>Επόμενο Μάθημα:</strong> Δευτέρα 02/11/2026 - 19:00</p>
+<p><strong>Θέμα:</strong> Κανονισμός Οφσάιντ & VAR Test</p>
+<button class="btn btn-accent" onclick="alert('Δηλώσατε παρουσία επιτυχώς!')">📝 Δήλωση Παρουσίας</button>
+</div>
+</div>
+
+</div>
+
+<!-- ================= ADMIN VIEW ================= -->
+<div id="view-admin" class="section">
+<h3>⚙️ Πίνακας Επιτροπής Διαιτησίας</h3>
+<p style="font-size: 0.85rem; color: #4b5563; margin-bottom: 10px;">Διαχείριση αγώνων Α', Β' Κατηγορίας και Παιδικών (K-15, K-13, K-11).</p>
+
+<div class="btn-group" style="margin-bottom: 15px;">
+<button class="btn btn-accent" onclick="runAutoAssign()">🤖 ΑΥΤΟΜΑΤΟΣ ΟΡΙΣΜΟΣ</button>
+<button class="btn" style="background: #0284c7;" onclick="openEpsListModal()">📋 ΠΡΟΒΟΛΗ ΛΙΣΤΑΣ ΕΠΣ</button>
+</div>
+
+<div id="admin-matches-list">
+<!-- Dynamically populated or static demo match -->
+<div class="card">
+<span class="badge badge-a">Α' ΚΑΤΗΓΟΡΙΑ</span>span_15span_15
+<h4>1. Α.Ε. ΑΜΠΕΛΟΚΗΠΩΝ vs Α.Ε. ΚΑΛΑΜΠΑΚΙΟΥ</h4>span_16span_16
+<p style="font-size: 0.85rem;">📅 31/10/2026 | 15:00 | Γήπεδο: ΑΜΠΕΛΟΚΗΠΩΝ (ΚΡΑΧΤΙΔΗ)</p>span_17span_17
+<label style="font-size: 0.8rem; font-weight: bold;">Διαιτητής:</label>
+<select>
+<option selected>Παπαδόπουλος Δημήτριος (Α')</option>span_18span_18
+<option>Παρασκευούδης Νικόλαος (Α')</option>span_19span_19
+</select>
+<label style="font-size: 0.8rem; font-weight: bold;">Α' Βοηθός:</label>
+<select><option selected>Ζήσης Αχιλλέας (Β')</option></select>span_20span_20
+<label style="font-size: 0.8rem; font-weight: bold;">Β' Βοηθός:</label>
+<select><option selected>Μαρμαρίδης Αναστάσιος (Γ')</option></select>span_21span_21
+</div>
+
+<div class="card">
+<span class="badge badge-youth">Κ-15 ΠΑΙΔΙΚΑ</span>span_22span_22
+<h4>2. Γ.Σ. ΔΟΞΑ ΔΡΑΜΑΣ 1 vs ΑΚΡΙΤΑΣ ΚΑΤΩ ΝΕΥΡΟΚΟΠΙΟΥ</h4>span_23span_23
+<p style="font-size: 0.85rem;">📅 31/10/2026 | 10:30 | Γήπεδο: ΔΟΞΑΣ (ΠΛΑΣΤΙΚΟ)</p>span_24span_24
+<label style="font-size: 0.8rem; font-weight: bold;">Διαιτητής:</label>
+<select><option selected>Ιορδανίδου Ελένη</option></select>span_25span_25
+</div>
+
+<div class="card">
+<span class="badge badge-youth">Κ-13 ΠΑΙΔΙΚΑ</span>span_26span_26
+<h4>3. ΟΡΦΕΑΣ ΧΩΡΙΣΤΗΣ vs ΠΑΟΠ ΝΕΑΣ ΑΜΙΣΟΥ</h4>span_27span_27
+<p style="font-size: 0.85rem;">📅 31/10/2026 | 12:30 | Γήπεδο: ΧΩΡΙΣΤΗΣ</p>span_28span_28
+<label style="font-size: 0.8rem; font-weight: bold;">Διαιτητής:</label>
+<select><option selected>Ζήσης Αχιλλέας</option></select>span_29span_29
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- Mobile Bottom Nav for Referee -->
+<div class="mobile-nav" id="ref-mobile-nav">
+<div class="nav-item active" onclick="switchRefTab('matches', this)"><span>⚽</span>Ορισμοί</div>
+<div class="nav-item" onclick="switchRefTab('conflicts', this)"><span>⚠️</span>Κωλύματα</div>
+<div class="nav-item" onclick="switchRefTab('training', this)"><span>🏃‍♂️</span>Προπόνηση</div>
+<div class="nav-item" onclick="switchRefTab('classes', this)"><span>📚</span>Μαθήματα</div>
+</div>
+
+<!-- Modal for EPS List -->
+<div id="eps-modal" class="modal">
+<div class="modal-content">
+<h3>📄 Επίσημος Πινάκας Ορισμών Ε.Π.Σ. Δράμας</h3>
+<hr style="margin: 10px 0;">
+<div id="eps-list-content" style="font-size: 0.85rem; line-height: 1.5;">
+<p><strong>Α' ΚΑΤΗΓΟΡΙΑ - 2026-2027</strong></p>span_30span_30
+<p>1. Α.Ε. ΑΜΠΕΛΟΚΗΠΩΝ - Α.Ε. ΚΑΛΑΜΠΑΚΙΟΥ (31/10 - 15:00)</p>span_31span_31
+<p>    Διαιτητής: Παπαδόπουλος Δ. | Βοηθοί: Ζήσης, Μαρμαρίδης</p>span_32span_32
+<br>
+<p><strong>Κ-15 ΠΑΙΔΙΚΑ</strong></p>span_33span_33
+<p>1. Γ.Σ. ΔΟΞΑ ΔΡΑΜΑΣ 1 - ΑΚΡΙΤΑΣ Κ. ΝΕΥΡΟΚΟΠΙΟΥ (31/10 - 10:30)</p>span_34span_34
+<p>    Διαιτητής: Ιορδανίδου Ελένη</p>span_35span_35
+<br>
+<p><strong>Κ-13 ΠΑΙΔΙΚΑ</strong></p>span_36span_36
+<p>1. ΟΡΦΕΑΣ ΧΩΡΙΣΤΗΣ - ΠΑΟΠ ΝΕΑΣ ΑΜΙΣΟΥ (31/10 - 12:30)</p>span_37span_37
+<p>    Διαιτητής: Ζήσης Αχιλλέας</p>span_38span_38
+</div>
+<div class="btn-group" style="margin-top: 15px;">
+<button class="btn" onclick="window.print()">🖨️ Εκτύπωση / PDF</button>
+<button class="btn btn-danger" onclick="closeEpsListModal()">Κλείσιμο</button>
+</div>
+</div>
+</div>
+
+<script>
+function switchView(view) {
+document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+if(view === 'referee') {
+document.querySelectorAll('.mode-btn')[0].classList.add('active');
+document.getElementById('view-referee').classList.add('active');
+document.getElementById('view-admin').classList.remove('active');
+document.getElementById('ref-mobile-nav').style.display = 'flex';
+} else {
+document.querySelectorAll('.mode-btn')[1].classList.add('active');
+document.getElementById('view-admin').classList.add('active');
+document.getElementById('view-referee').classList.remove('active');
+document.getElementById('ref-mobile-nav').style.display = 'none';
+}
+}
+
+function switchRefTab(tabName, element) {
+document.querySelectorAll('.ref-sub-section').forEach(s => s.style.display = 'none');
+document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+
+document.getElementById('ref-tab-' + tabName).style.display = 'block';
+element.classList.add('active');
+}
+
+function submitConflict(e) {
+e.preventDefault();
+const desc = document.getElementById('conf-desc').value;
+const list = document.getElementById('active-conflicts-list');
+list.innerHTML += <div class="card" style="padding: 10px; font-size: 0.85rem;"&gt;❌ &lt;strong&gt;Νέο Κώλυμα:&lt;/strong&gt; ${desc}&lt;/div>;
+alert('Το κώλυμα καταχωρήθηκε επιτυχώς και ενημερώθηκε η επιτροπή!');
+document.getElementById('conf-desc').value = '';
+}
+
+function submitTraining(e) {
+e.preventDefault();
+alert('Η προπόνηση καταγράφηκε με επιτυχία στο προφίλ σας!');
+}
+
+function runAutoAssign() {
+alert('🤖 Ο αυτόματος αλγόριθμος έτρεξε επιτυχώς! Οι διαθέσιμοι διαιτητές τοποθετήθηκαν βάσει κατηγορίας και κωλυμάτων.');
+}
+
+function openEpsListModal() {
+document.getElementById('eps-modal').style.display = 'flex';
+}
+
+function closeEpsListModal() {
+document.getElementById('eps-modal').style.display = 'none';
+}
+</script>
+</body>
+</html>
